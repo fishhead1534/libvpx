@@ -1,0 +1,95 @@
+# ../configure --target=x86_64-win64-vs17
+  enabling vp8_encoder
+  enabling vp8_decoder
+  enabling vp9_encoder
+  enabling vp9_decoder
+Configuring for target 'x86_64-win64-vs17'
+  enabling x86_64
+check_cpp
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	#if !(__pie__ || __PIE__)
+     2	#error Neither __pie__ or __PIE__ are set
+     3	#endif
+END /tmp/vpx-conf-1059-31727.c
+-E -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -E: not found
+  enabling pic
+check_cpp
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	#if !defined(__ILP32__) || !defined(__x86_64__)
+     2	#error "not x32"
+     3	#endif
+END /tmp/vpx-conf-1059-31727.c
+-E -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -E: not found
+  enabling runtime_cpu_detect
+  enabling mmx
+  enabling sse
+  enabling sse2
+  enabling sse3
+  enabling ssse3
+  enabling sse4_1
+  enabling avx
+  enabling avx2
+  enabling avx512
+check_cc -mavx512f
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	#include <immintrin.h>
+     2	void f(void) {
+     3	  __m512i x = _mm512_set1_epi16(0);
+     4	  (void)x;
+     5	}
+END /tmp/vpx-conf-1059-31727.c
+-mavx512f -c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -mavx512f: not found
+    disabling avx512: not supported by compiler
+  using yasm
+check_cxxflags -DNDEBUG
+check_cxx -Werror -DNDEBUG
+BEGIN /tmp/vpx-conf-1059-31727.cc
+     1	int x;
+END /tmp/vpx-conf-1059-31727.cc
+-Werror -DNDEBUG -c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.cc
+../configure: 295: -Werror: not found
+check_cflags -DNDEBUG
+check_cc -Werror -DNDEBUG
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	int x;
+END /tmp/vpx-conf-1059-31727.c
+-Werror -DNDEBUG -c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -Werror: not found
+check_cxxflags -O3
+check_cxx -Werror -O3
+BEGIN /tmp/vpx-conf-1059-31727.cc
+     1	int x;
+END /tmp/vpx-conf-1059-31727.cc
+-Werror -O3 -c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.cc
+../configure: 295: -Werror: not found
+check_cflags -O3
+check_cc -Werror -O3
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	int x;
+END /tmp/vpx-conf-1059-31727.c
+-Werror -O3 -c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -Werror: not found
+check_cc
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
+END /tmp/vpx-conf-1059-31727.c
+-c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -c: not found
+check_cc
+BEGIN /tmp/vpx-conf-1059-31727.c
+     1	static inline int function(void) {}
+END /tmp/vpx-conf-1059-31727.c
+-c -o /tmp/vpx-conf-1059-31727.o /tmp/vpx-conf-1059-31727.c
+../configure: 295: -c: not found
+  disabling ccache
+  enabling postproc
+  enabling unit_tests
+  enabling webm_io
+  enabling libyuv
+fake_check_header stdio.h
+fake_check_header pthread.h
+fake_check_header unistd.h
+fake_check_header vpx/vpx_integer.h -I..
